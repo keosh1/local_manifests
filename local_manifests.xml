@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<!-- Generated using keosh1/actions_generate_local_manifests_mondrian flake -->
+    <remotes>
+        <remote name="github" fetch="https://github.com/DanipunK1-mondrian-DC/" />
+        <remote name="keosh" fetch="https://github.com/keosh1/" />
+    </remotes>
 
+    <project name="vendor_bcr" path="vendor/bcr" remote="github" revision="main" />
+    <project name="packages_apps_ViPER4AndroidFX" path="packages/apps/ViPER4AndroidFX" remote="github" revision="v4a" />
+    <project name="vendor_xiaomi_mondrian" path="vendor/xiaomi/mondrian" remote="github" revision="udc" />
+    <project name="device_xiaomi_mondrian" path="device/xiaomi/mondrian" remote="keosh" revision="risingos" />
+    <project name="device_xiaomi_mondrian-kernel" path="device/xiaomi/mondrian-kernel" remote="github" revision="matrixx" />
+    <project name="device_qcom_common" path="device/qcom/common" remote="github" revision="uvite" />
+    <project name="kernel_xiaomi_sm8475" path="kernel/xiaomi/sm8475" remote="github" revision="baalam-rebase" />
+    <project name="device_xiaomi_sepolicy" path="device/xiaomi/sepolicy" remote="github" revision="udc" />
+    <project name="hardware_xiaomi" path="hardware/xiaomi" remote="github" revision="udc" />
    
-   
-  <!-- Device trees -->
-	<project name="Evolution-X-Devices" path="device/xiaomi/mondrian" remote="github" revision="udc" />
-
-	<!-- Kernel -->
-	<project name="Evolution-X-Devices" path="device_xiaomi_mondrian-kernel" remote="github" revision="udc" />
-	
-  <!-- Vendor -->
-	<project name="Evolution-X-Devices" path="vendor/xiaomi/mondrian" remote="github" revision="udc" />
-
 </manifest>
