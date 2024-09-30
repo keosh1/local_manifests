@@ -5,8 +5,8 @@
         
     </remotes>
 
-    <project name="vendor_bcr" path="vendor/bcr" remote="github" revision="main" />
-    <project name="packages_apps_ViPER4AndroidFX" path="packages/apps/ViPER4AndroidFX" remote="github" revision="v4a" />
+    <project name="keosh1/vendor_bcr" path="vendor/bcr" remote="github" revision="main" />
+    <project name="keosh1/packages_apps_ViPER4AndroidFX" path="packages/apps/ViPER4AndroidFX" remote="github" revision="v4a" />
     <project name="keosh1/vendor_xiaomi_mondrian" path="vendor/xiaomi/mondrian" remote="github" revision="udc" />
     <project name="keosh1/device_xiaomi_mondrian" path="device/xiaomi/mondrian" remote="github" revision="risingos" />
     <project name="keosh1/device_xiaomi_mondrian-kernel" path="device/xiaomi/mondrian-kernel" remote="github" revision="matrixx" />
