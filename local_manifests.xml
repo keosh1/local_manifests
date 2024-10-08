@@ -6,7 +6,7 @@
 <remote fetch="https://git.lhnlm.fr" name="lhnlm" revision="14.0" />
 	<!-- Device trees -->
   <project name="keosh1/android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="github" revision="lineage-21" clone-depth="1" />
-	<project name="keosh1/android_device_xiaomi_mondrian" path="device/xiaomi/mondrian" remote="github" revision="lineage-21" clone-depth="1" />
+	<project name="keosh1/android_device_xiaomi_mondrian" path="device/xiaomi/mondrian" remote="github" revision="CR" clone-depth="1" />
 
   <!-- Xiaomi common hardware -->
   <project path="hardware/xiaomi" remote="github" name="LineageOS/android_hardware_xiaomi" revision="lineage-21" clone-depth="1" />
