@@ -8,7 +8,7 @@
 	<project name="keosh1/android_device_xiaomi_mondrian" path="device/xiaomi/mondrian" remote="github" revision="lineage-21" clone-depth="1" />
 
   <!-- Xiaomi common hardware -->
-  <project path="hardware/xiaomi" remote="github" name="LineageOS/android_hardware_xiaomi" revision="lineage-21" clone-depth="1" />
+  <project path="hardware/xiaomi" remote="github" name="GioKas93/android_hardware_xiaomi" revision="uvite" clone-depth="1" />
  <!-- MIUI Camera -->
  <project name="keosh1/vendor_xiaomi_miuicamera" path="vendor/xiaomi/camera" remote="github" revision="main" clone-depth="1" />
   <!-- Kernel -->
