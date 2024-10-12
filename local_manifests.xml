@@ -3,16 +3,14 @@
 <!-- Generated using keosh1/actions_generate_local_manifests_mondrian -->
 	 <!-- Remotes -->
   <remote fetch="https://git.mainlining.org" name="mainlining" revision="lineage-21" />
-<remote fetch="https://git.lhnlm.fr" name="lhnlm" revision="14.0" />
-	 
 	<!-- Device trees -->
   <project name="keosh1/android_device_xiaomi_sm8450-common" path="device/xiaomi/sm8450-common" remote="github" revision="lineage-21" clone-depth="1" />
 	<project name="keosh1/android_device_xiaomi_mondrian" path="device/xiaomi/mondrian" remote="github" revision="lineage-21" clone-depth="1" />
 
   <!-- Xiaomi common hardware -->
   <project path="hardware/xiaomi" remote="github" name="LineageOS/android_hardware_xiaomi" revision="lineage-21" clone-depth="1" />
- <!-- MIUI Leica Camera -->
- <project name="mondrian/android_vendor_xiaomi_miuicamera" path="vendor/xiaomi/camera" remote="lhnlm" />
+ <!-- MIUI Camera -->
+ <project name="keosh1/vendor_xiaomi_miuicamera" path="vendor/xiaomi/camera" remote="github" revision="main" clone-depth="1" />
   <!-- Kernel -->
   <project name="cupid-development/android_kernel_xiaomi_sm8450" path="kernel/xiaomi/sm8450" remote="github" revision="lineage-21" clone-depth="1" />
   <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="kernel/xiaomi/sm8450-devicetrees" remote="github" revision="lineage-21" clone-depth="1" />
