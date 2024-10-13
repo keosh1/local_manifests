@@ -10,7 +10,7 @@
   <!-- Xiaomi common hardware -->
   <project path="hardware/xiaomi" remote="github" name="LineageOS/android_hardware_xiaomi" revision="lineage-21" clone-depth="1" />
  <!-- MIUI Camera -->
- <project name="keosh1/proprietary_vendor_xiaomi_miuicamera" path="vendor/xiaomi/miuicamera-cupid" remote="github" revision="main" clone-depth="1" />
+ <project name="cupid-development/android_device_xiaomi_miuicamera-cupid" path="vendor/xiaomi/miuicamera-cupid" remote="github" revision="main" clone-depth="1" />
   <!-- Kernel -->
   <project name="keosh1/android_kernel_xiaomi_sm8450" path="kernel/xiaomi/sm8450" remote="github" revision="lineage-21" clone-depth="1" />
   <project name="cupid-development/android_kernel_xiaomi_sm8450-devicetrees" path="kernel/xiaomi/sm8450-devicetrees" remote="github" revision="lineage-21" clone-depth="1" />
