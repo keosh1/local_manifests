@@ -21,7 +21,4 @@
   <project name="cupid-development/proprietary_vendor_xiaomi_mondrian" path="vendor/xiaomi/mondrian" remote="mainlining" revision="lineage-21" clone-depth="1" />
   <!-- Extra -->
   <project path="packages/apps/Shell" remote="github" name="android-kxxt/android_packages_apps_Shell" revision="master" />
-  <!-- Display HAL -->
-  <remove-project name="LineageOS/android_hardware_qcom_display"/>
-  <project name="keosh1/hardware_qcom-caf_sm8450_display" path="hardware/qcom-caf/sm8450/display" remote="github" revision="14" clone-depth="1" />
 </manifest>
