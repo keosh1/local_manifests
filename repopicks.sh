@@ -2,7 +2,7 @@
 set -e
 
 source "build/envsetup.sh";
-source "vendor/lineage/build/envsetup.sh";
+source "vendor/yaap/build/envsetup.sh";
 
 # hardware/qcom-caf/sm8450/audio/primary-hal
 changes=(
@@ -22,7 +22,7 @@ repopick -f -P hardware/xiaomi ${changes[@]}&
 changes=(
 367044 # android: merge_dtbs: Respect miboard-id while merging
 )
-repopick -f -P vendor/lineage ${changes[@]}&
+repopick -f -P vendor/yaap ${changes[@]}&
 
 wait
 
