@@ -1,7 +1,8 @@
 #!/bin/bash
 
 rm -rf .repo/local_manifests/
-
+#A15 source repo
+repo init -u https://github.com/LineageOS/android.git -b lineage-22.0 --git-lfs
 # Rom source repo
 repo init -u https://github.com/yaap/manifest.git -b fifteen --git-lfs
 echo "=================="
