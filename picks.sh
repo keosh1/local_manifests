@@ -1,0 +1,84 @@
+#!/bin/bash
+
+ANDROID_BUILD_TOP="$(dirname $(realpath "$0"))"
+CHECK="$(echo $1 | grep -q check && echo 1)"
+GERRIT_USERNAME="$(git config review.review.lineageos.org.username)"
+
+function repopick() {
+    if [[ "$CHECK" = "1" ]]; then
+        echo -n "${@: -1} - " ; ssh lineage-gerrit gerrit query ${@: -1} --format=JSON | jq --slurp -r '.[0].status'
+    else
+        ${ANDROID_BUILD_TOP}/vendor/yaap/build/tools/repopick.py \
+            -g "ssh://$GERRIT_USERNAME@review.lineageos.org:29418" $@ &
+    fi
+}
+
+function repopickchain() {
+    if [[ "$CHECK" = "1" ]]; then
+        echo -n "$1 - " ; ssh lineage-gerrit gerrit query $1 --format=JSON | jq --slurp -r '.[0].status'
+    else
+        `${ANDROID_BUILD_TOP}/gen_chain $@`
+    fi
+}
+
+function rc() {
+    echo `${ANDROID_BUILD_TOP}/gen_chain $@ | cut -b10-`
+}
+
+#
+# _examples_
+#
+# # repo/1
+# changes=(
+#     2137 # hello
+#     `rc 2137` # hello (chain)
+# )
+# repopick ${changes[@]}
+#
+# # repo/2
+# repopickchain 2137 # hello (chain)
+#
+# # repo/3
+# repopick 2137 # hello
+#
+
+# build/make
+# repopick -f 332045 # Don't enforce vintf kernel requirements when building without LTO
+
+# frameworks/base
+# repopick -f 357988 # Set DEFAULT_ADB_ALLOWED_CONNECTION_TIME to 0
+
+# device/xiaomi/msm8996-common
+repopickchain 404335 # msm8996-common: Shim widevine with libcrypto_shim
+
+# frameworks/base
+repopickchain 405323 # webkit: SystemImpl: Filter out unavailable providers
+
+# frameworks/opt/telephony
+repopickchain 401683 # Revert "Clear up the obsoleted cascading signal strength polling logic"
+
+# hardware/lineage/interfaces
+repopickchain 404346 # power-libperfmgr: Fix shared_ptr conversion for HintManager
+
+# packages/apps/LineageParts
+repopickchain 404099 # LineageParts: Set fitsSystemWindows to true for PartsActivity
+
+# packages/apps/Settings
+repopickchain 402919 # NetworkProvider: Remove header start padding in SuW
+
+# packages/apps/Trebuchet
+repopickchain 402832 # Trebuchet: Let's keep 2-button nav alive for a little longer
+
+# packages/modules/Connectivity
+repopickchain 405071 # netd: Require 4.19+ for programs using connect/recvmsg/sendmsg hooks
+
+# vendor/crowdin
+repopickchain 404380 # rm -rf
+
+# vendor/qcom/opensource/commonsys/fm
+repopickchain 403061 # FM2: Slight design adjustments
+
+# vendor/qcom/opensource/usb
+repopickchain 403987 # hal: Make it build with -Werror
+
+wait
