@@ -26,8 +26,8 @@ repopick -f -P vendor/yaap ${changes[@]}&
 
 wait
 
-wget https://raw.githubusercontent.com/luk1337/lineageos-rootdir/refs/heads/lineage-22.0/picks
-wget https://raw.githubusercontent.com/luk1337/lineageos-rootdir/refs/heads/lineage-22.0/gen_chain
+wget https://raw.githubusercontent.com/keosh1/local_manifests/refs/heads/a15/picks
+wget https://raw.githubusercontent.com/keosh1/local_manifests/refs/heads/a15/gen_chan
 chmod +x picks
 chmod +x gen_chain
 bash ./picks
