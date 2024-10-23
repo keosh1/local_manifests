@@ -19,4 +19,9 @@
   <!-- Vendor -->
   <project name="cupid-development/proprietary_vendor_xiaomi_sm8450-common" path="vendor/xiaomi/sm8450-common" remote="mainlining" revision="lineage-21" clone-depth="1" />
   <project name="cupid-development/proprietary_vendor_xiaomi_mondrian" path="vendor/xiaomi/mondrian" remote="mainlining" revision="lineage-21" clone-depth="1" />
+
+<project path="external/chromium-webview/prebuilt/arm" name="LineageOS/android_external_chromium-webview_prebuilt_arm" remote="github" revision="main" />
+ <project path="external/chromium-webview/prebuilt/arm64" name="LineageOS/android_external_chromium-webview_prebuilt_arm64" remote="github" revision="main" />
+ <project path="external/chromium-webview/prebuilt/x86" name="LineageOS/android_external_chromium-webview_prebuilt_x86" remote="github" revision="main" />
+ <project path="external/chromium-webview/prebuilt/x86_64" name="LineageOS/android_external_chromium-webview_prebuilt_x86_64" remote="github" revision="main" />
 </manifest>
