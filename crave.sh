@@ -28,6 +28,7 @@ cp /usr/bin/../lib/gcc/x86_64-linux-gnu/* /usr/bin/../lib/gcc/x86_64-linux-gnu/1
 rm -rf external/seedvault
 export BUILD_USERNAME=keosh1
 export BUILD_HOSTNAME=crave
+export TARGET_BUILD_GAPPS=true
 # Sync the repositories
 /opt/crave/resync.sh
 echo "============================"
