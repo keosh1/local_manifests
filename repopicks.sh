@@ -27,7 +27,7 @@ repopick -f -P vendor/yaap ${changes[@]}&
 wait
 
 wget https://raw.githubusercontent.com/keosh1/local_manifests/refs/heads/a15/picks
-wget https://raw.githubusercontent.com/keosh1/local_manifests/refs/heads/a15/gen_chan
+wget https://raw.githubusercontent.com/keosh1/local_manifests/refs/heads/a15/gen_chain
 chmod +x picks
 chmod +x gen_chain
 bash ./picks
