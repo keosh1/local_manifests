@@ -20,12 +20,13 @@ echo "Local manifest clone success"
 echo "============================"
 # Set LD_LIBRARY_PATH (libgcc_s.so.1 linker)
 
-mkdir -p /usr/bin/../lib/gcc/x86_64-linux-gnu/11
-cp /usr/bin/../lib/gcc/x86_64-linux-gnu/* /usr/bin/../lib/gcc/x86_64-linux-gnu/11/*
+#mkdir -p /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+sudo cp /usr/bin/../lib/x86_64-linux-gnu/libgcc_s.so.1 /usr/bin/../lib/gcc/x86_64-linux-gnu/11/libgcc_s.so.1
 
 # Temp fix: Remove Seedvault
 
 rm -rf external/seedvault
+
 export BUILD_USERNAME=keosh1
 export BUILD_HOSTNAME=crave
 export TARGET_BUILD_GAPPS=true
